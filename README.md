@@ -17,13 +17,13 @@
    Для запуска скрипта подключитесь к роутеру по SSH, введите команду и следуйте инструкциям на экране:
 
 ```
-sh <(wget -O - https://raw.githubusercontent.com/Slava-Shchipunov/awg-openwrt/refs/heads/master/amneziawg-install.sh)
+sh <(wget -O - https://raw.githubusercontent.com/agriadsi/awg-openwrt/refs/heads/master/amneziawg-install.sh)
 ```
 
 3. Также предусмотрен неинтерактивный режим простой установки пакетов (без вопросов о настройке интерфейса с протоколом AmneziaWG и установке пакета `luci-i18n-amneziawg-ru`):
 
 ```
-sh <(wget -O - https://raw.githubusercontent.com/Slava-Shchipunov/awg-openwrt/refs/heads/master/amneziawg-install.sh) -en
+sh <(wget -O - https://raw.githubusercontent.com/agriadsi/awg-openwrt/refs/heads/master/amneziawg-install.sh) -en
 ```
 
 4. Кроме того для автоматической настройки также можно использовать [скрипт](https://github.com/itdoginfo/domain-routing-openwrt) от пользователя [@itdoginfo](https://github.com/itdoginfo). Этот скрипт позволяет автоматически скачать нужные пакеты из собранных здесь и настроить [точечный обход блокировок по доменам](https://habr.com/ru/articles/767464/). Подойдёт, если у вас слабый роутер с недостаточным объёмом ROM для установки podkop-a и зависимостей
@@ -33,30 +33,30 @@ sh <(wget -O - https://raw.githubusercontent.com/Slava-Shchipunov/awg-openwrt/re
 В репозиторий добавлен скрипт, который парсит данные о поддерживаемых платформах со страницы OpenWRT и автоматически запускает сборку пакетов AmneziaWG для всех устройств.
 На данный момент я собрал пакеты для всех устройств для OpenWRT версий:
 
-1. [23.05.0](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v23.05.0)
-2. [23.05.1](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v23.05.1)
-3. [23.05.2](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v23.05.2)
-4. [23.05.3](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v23.05.3)
-5. [23.05.4](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v23.05.4)
-6. [23.05.5](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v23.05.5)
-7. AWG-2.0 [23.05.6](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v23.05.6)
-8. [24.10.0](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.0) ([AWG-2.0 для 24.10.0](https://github.com/yanjore/awg-openwrt/releases/tag/v24.10.0) из форка, если кому-то понадобится)
-9. [24.10.1](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.1) ([AWG-2.0 для 24.10.1](https://github.com/yanjore/awg-openwrt/releases/tag/v24.10.1) из форка)
-10. [24.10.2](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.2) ([AWG-2.0 для 24.10.2](https://github.com/yanjore/awg-openwrt/releases/tag/v24.10.2) из форка)
-11. AWG-2.0 [24.10.3](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.3)
-12. AWG-2.0 [24.10.4](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.4)
-13. AWG-2.0 [24.10.5](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.5)
-14. AWG-2.0 [24.10.6](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.6)
-14. AWG-2.0 [24.10.7](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.7)
-14. AWG-3.1 [24.10.8](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.8)
-16. AWG-2.0 [25.12.0](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v25.12.0)
-17. AWG-2.0 [25.12.1](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v25.12.1)
-18. AWG-2.0 [25.12.2](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v25.12.2)
-19. AWG-2.0 [25.12.3](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v25.12.3)
-20. AWG-2.0 [25.12.4](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v25.12.4)
-21. AWG-3.1 [25.12.5](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v25.12.5)
+1. [23.05.0](https://github.com/agriadsi/awg-openwrt/releases/tag/v23.05.0)
+2. [23.05.1](https://github.com/agriadsi/awg-openwrt/releases/tag/v23.05.1)
+3. [23.05.2](https://github.com/agriadsi/awg-openwrt/releases/tag/v23.05.2)
+4. [23.05.3](https://github.com/agriadsi/awg-openwrt/releases/tag/v23.05.3)
+5. [23.05.4](https://github.com/agriadsi/awg-openwrt/releases/tag/v23.05.4)
+6. [23.05.5](https://github.com/agriadsi/awg-openwrt/releases/tag/v23.05.5)
+7. AWG-2.0 [23.05.6](https://github.com/agriadsi/awg-openwrt/releases/tag/v23.05.6)
+8. [24.10.0](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.0) ([AWG-2.0 для 24.10.0](https://github.com/yanjore/awg-openwrt/releases/tag/v24.10.0) из форка, если кому-то понадобится)
+9. [24.10.1](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.1) ([AWG-2.0 для 24.10.1](https://github.com/yanjore/awg-openwrt/releases/tag/v24.10.1) из форка)
+10. [24.10.2](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.2) ([AWG-2.0 для 24.10.2](https://github.com/yanjore/awg-openwrt/releases/tag/v24.10.2) из форка)
+11. AWG-2.0 [24.10.3](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.3)
+12. AWG-2.0 [24.10.4](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.4)
+13. AWG-2.0 [24.10.5](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.5)
+14. AWG-2.0 [24.10.6](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.6)
+14. AWG-2.0 [24.10.7](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.7)
+14. AWG-3.1 [24.10.8](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.8)
+16. AWG-2.0 [25.12.0](https://github.com/agriadsi/awg-openwrt/releases/tag/v25.12.0)
+17. AWG-2.0 [25.12.1](https://github.com/agriadsi/awg-openwrt/releases/tag/v25.12.1)
+18. AWG-2.0 [25.12.2](https://github.com/agriadsi/awg-openwrt/releases/tag/v25.12.2)
+19. AWG-2.0 [25.12.3](https://github.com/agriadsi/awg-openwrt/releases/tag/v25.12.3)
+20. AWG-2.0 [25.12.4](https://github.com/agriadsi/awg-openwrt/releases/tag/v25.12.4)
+21. AWG-3.1 [25.12.5](https://github.com/agriadsi/awg-openwrt/releases/tag/v25.12.5)
 
-Также запускал сборку для версии [22.03.7](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v22.03.7), но там для двух платформ сборка завершилась ошибкой. Так как это достаточно старая версия OpenWRT, я не стал разбираться, в чем проблема.
+Также запускал сборку для версии [22.03.7](https://github.com/agriadsi/awg-openwrt/releases/tag/v22.03.7), но там для двух платформ сборка завершилась ошибкой. Так как это достаточно старая версия OpenWRT, я не стал разбираться, в чем проблема.
 
 ## Выбор пакетов для своего устройства
 
@@ -126,7 +126,7 @@ AWG 2.0 можно собрать под определённую платфор
 - [@kozhini](https://github.com/kozhini) и [@this-username-has-been-taken](https://github.com/this-username-has-been-taken) — ~~у которых я позаимствовал код Makefile-ов~~ чьим примером я вдохновлялся🙃
 - [@Kot-nikot](https://github.com/Kot-nikot) и [@Onotot](https://github.com/Onotot) — за полезные материалы и подсказки🤝
 - [@ygurov](https://github.com/ygurov) - за [имплементацию](https://github.com/amnezia-vpn/amneziawg-linux-kernel-module/pull/88) awg 2.0 для модуля ядра 💪
-- А также всем, кто приносил полезные примеры в личку и в [ишью](https://github.com/Slava-Shchipunov/awg-openwrt/issues/39), отписывались в комменты к PR с имплементацией о возникших багах и проблемах ❤️
+- А также всем, кто приносил полезные примеры в личку и в [ишью](https://github.com/agriadsi/awg-openwrt/issues/39), отписывались в комменты к PR с имплементацией о возникших багах и проблемах ❤️
 
 ## Automatic configuration of AmneziaWG for OpenWRT version 23.05.0 and newer
 
@@ -136,13 +136,13 @@ AWG 2.0 можно собрать под определённую платфор
    To run the script, connect to the router via SSH, enter the command and follow the instructions on the screen:
 
 ```
-sh <(wget -O - https://raw.githubusercontent.com/Slava-Shchipunov/awg-openwrt/refs/heads/master/amneziawg-install.sh)
+sh <(wget -O - https://raw.githubusercontent.com/agriadsi/awg-openwrt/refs/heads/master/amneziawg-install.sh)
 ```
 
 3. There is also a non-interactive mode for simple package installation (without questions about configuring an interface with the AmneziaWG protocol and installing the `luci-i18n-amneziawg-ru` package):
 
 ```
-sh <(wget -O - https://raw.githubusercontent.com/Slava-Shchipunov/awg-openwrt/refs/heads/master/amneziawg-install.sh) -en
+sh <(wget -O - https://raw.githubusercontent.com/agriadsi/awg-openwrt/refs/heads/master/amneziawg-install.sh) -en
 ```
 
 4. In addition, for automatic configuration you can also use the [script](https://github.com/itdoginfo/domain-routing-openwrt) from user [@itdoginfo](https://github.com/itdoginfo). This script allows you to automatically download the necessary packages from those collected here and configure [point-by-point bypass of blocking by domains](https://habr.com/ru/articles/767464/) (instructions in Russian). Suitable if you have a weak router with insufficient ROM to install podkop and its dependencies
@@ -152,30 +152,30 @@ sh <(wget -O - https://raw.githubusercontent.com/Slava-Shchipunov/awg-openwrt/re
 A script has been added to the repository that parses data on supported platforms from the OpenWRT page and automatically starts building AmneziaWG packages for all devices.
 At the moment I have collected packages for all devices for OpenWRT versions:
 
-1. [23.05.0](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v23.05.0)
-2. [23.05.1](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v23.05.1)
-3. [23.05.2](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v23.05.2)
-4. [23.05.3](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v23.05.3)
-5. [23.05.4](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v23.05.4)
-6. [23.05.5](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v23.05.5)
-7. AWG-2.0 [23.05.6](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v23.05.6)
-8. [24.10.0](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.0) ([AWG-2.0 for 24.10.0](https://github.com/yanjore/awg-openwrt/releases/tag/v24.10.0) from fork)
-9. [24.10.1](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.1) ([AWG-2.0 for 24.10.1](https://github.com/yanjore/awg-openwrt/releases/tag/v24.10.1) from fork)
-10. [24.10.2](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.2) ([AWG-2.0 for 24.10.2](https://github.com/yanjore/awg-openwrt/releases/tag/v24.10.2) from fork)
-11. AWG-2.0 [24.10.3](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.3)
-12. AWG-2.0 [24.10.4](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.4)
-13. AWG-2.0 [24.10.5](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.5)
-14. AWG-2.0 [24.10.6](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.6)
-14. AWG-2.0 [24.10.7](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.7)
-14. AWG-3.1 [24.10.8](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v24.10.8)
-15. AWG-2.0 [25.12.0](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v25.12.0)
-16. AWG-2.0 [25.12.1](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v25.12.1)
-17. AWG-2.0 [25.12.2](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v25.12.2)
-18. AWG-2.0 [25.12.3](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v25.12.3)
-20. AWG-2.0 [25.12.4](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v25.12.4)
-21. AWG-3.1 [25.12.5](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v25.12.5)
+1. [23.05.0](https://github.com/agriadsi/awg-openwrt/releases/tag/v23.05.0)
+2. [23.05.1](https://github.com/agriadsi/awg-openwrt/releases/tag/v23.05.1)
+3. [23.05.2](https://github.com/agriadsi/awg-openwrt/releases/tag/v23.05.2)
+4. [23.05.3](https://github.com/agriadsi/awg-openwrt/releases/tag/v23.05.3)
+5. [23.05.4](https://github.com/agriadsi/awg-openwrt/releases/tag/v23.05.4)
+6. [23.05.5](https://github.com/agriadsi/awg-openwrt/releases/tag/v23.05.5)
+7. AWG-2.0 [23.05.6](https://github.com/agriadsi/awg-openwrt/releases/tag/v23.05.6)
+8. [24.10.0](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.0) ([AWG-2.0 for 24.10.0](https://github.com/yanjore/awg-openwrt/releases/tag/v24.10.0) from fork)
+9. [24.10.1](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.1) ([AWG-2.0 for 24.10.1](https://github.com/yanjore/awg-openwrt/releases/tag/v24.10.1) from fork)
+10. [24.10.2](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.2) ([AWG-2.0 for 24.10.2](https://github.com/yanjore/awg-openwrt/releases/tag/v24.10.2) from fork)
+11. AWG-2.0 [24.10.3](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.3)
+12. AWG-2.0 [24.10.4](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.4)
+13. AWG-2.0 [24.10.5](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.5)
+14. AWG-2.0 [24.10.6](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.6)
+14. AWG-2.0 [24.10.7](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.7)
+14. AWG-3.1 [24.10.8](https://github.com/agriadsi/awg-openwrt/releases/tag/v24.10.8)
+15. AWG-2.0 [25.12.0](https://github.com/agriadsi/awg-openwrt/releases/tag/v25.12.0)
+16. AWG-2.0 [25.12.1](https://github.com/agriadsi/awg-openwrt/releases/tag/v25.12.1)
+17. AWG-2.0 [25.12.2](https://github.com/agriadsi/awg-openwrt/releases/tag/v25.12.2)
+18. AWG-2.0 [25.12.3](https://github.com/agriadsi/awg-openwrt/releases/tag/v25.12.3)
+20. AWG-2.0 [25.12.4](https://github.com/agriadsi/awg-openwrt/releases/tag/v25.12.4)
+21. AWG-3.1 [25.12.5](https://github.com/agriadsi/awg-openwrt/releases/tag/v25.12.5)
 
-I also ran the build for version [22.03.7](https://github.com/Slava-Shchipunov/awg-openwrt/releases/tag/v22.03.7), but the build ended with an error for two platforms. Since this is a fairly old version of OpenWRT, I did not bother to figure out what the problem was.
+I also ran the build for version [22.03.7](https://github.com/agriadsi/awg-openwrt/releases/tag/v22.03.7), but the build ended with an error for two platforms. Since this is a fairly old version of OpenWRT, I did not bother to figure out what the problem was.
 
 ## Selecting packages for your device
 
